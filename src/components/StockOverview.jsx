@@ -30,8 +30,10 @@ const STOCK_OPTIONS = [
 ];
 
 const StockOverview = () => {
+  // will be changed according to StockOverview ---------------
   const [selectedStock, setSelectedStock] = useState("");
-
+  
+  // will be changed according to StockOverview -------------------
   const { data, isLoading } = useQuery({
     queryKey: ["stockOverview", selectedStock],
     queryFn: () => getHistoricalData(selectedStock),

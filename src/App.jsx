@@ -1,13 +1,17 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import "./App.css";
+import { Provider } from "react-redux";
 import Dashboard from "pages/Dashboard";
+import "./App.css";
+import { store } from "./store";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Dashboard />
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
     </QueryClientProvider>
   );
 }

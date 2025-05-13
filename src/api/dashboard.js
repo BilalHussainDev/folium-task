@@ -1,5 +1,5 @@
-// import { api } from ".";
-import { historicalData } from "data/historicalData";
+import { api } from ".";
+import { historicalData } from "data/historicalData"; // will be removed --------------
 import { data } from "data/index"; // will be removed --------------
 
 export const getStockData = async (range) => {
@@ -16,12 +16,12 @@ export const getStockData = async (range) => {
 };
 
 export const getHistoricalData = async (selectedStock) => {
-  //   const response = await api.get("query", {
-  //     params: {
-  //       function: "TIME_SERIES_DAILY",
-  //       symbol: selectedStock,
-  //     },
-  //   });
-  //   return response.data;
+    // const response = await api.get("query", {
+    //   params: {
+    //     function: "TIME_SERIES_DAILY",
+    //     symbol: selectedStock,
+    //   },
+    // });
+    // return response.data;
   return historicalData; // will be removed --------------------
 };
