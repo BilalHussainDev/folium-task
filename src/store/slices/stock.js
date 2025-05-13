@@ -19,6 +19,6 @@ export const stockSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = stockSlice.actions;
+export const { saveSelectedStock, saveTimeRange } = stockSlice.actions;
 
 export default stockSlice.reducer;

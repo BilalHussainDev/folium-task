@@ -22,6 +22,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { saveSelectedStock } from "store/slices/stock";
 
 const STOCK_OPTIONS = [
   { label: "United States", value: "IBM" },
@@ -76,7 +77,10 @@ const HistoricalData = () => {
             <Select
               value={selectedStock}
               label="Stock"
-              onChange={(e) => setSelectedStock(e.target.value)}
+              onChange={(e) => {
+                setSelectedStock(e.target.value)
+                dispatch(saveSelectedStock(e.target.value))
+              }}
             >
               {STOCK_OPTIONS.map((stock) => (
                 <MenuItem key={stock.value} value={stock.value}>
